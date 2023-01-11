@@ -3,12 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'remixicon/fonts/remixicon.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'react-bootstrap/Carousel'
+import store from './store/store';
+import { Provider } from 'react-redux';
+// import DataBindining from './component/DataBindining';
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>   
   </React.StrictMode>
 );
 
